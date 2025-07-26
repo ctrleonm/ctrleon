@@ -1,3 +1,3 @@
 ## Attribution
 
-- Website template: [Stevan Klafer](https://stevan-klafer-portfolio.netlify.app/)
+- Website inspired by [Stevan Klafer](https://stevan-klafer-portfolio.netlify.app/)
