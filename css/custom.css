@@ -1,0 +1,7 @@
+.photos-gallery img {
+  transition: transform 0.4s ease;
+}
+
+.photos-gallery img:hover {
+  transform: scale(1.1);
+}
