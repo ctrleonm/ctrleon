@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+
+  <!-- Hero image -->
+  <img class="hero" src="./imgs/gallery/all/leanda1.webp" alt="Hero image">
+
+  <!-- Thumbnails underneath -->
+  <div class="thumb-row">
+    <img src="./imgs/gallery/all/leanda2.webp" alt="Detail 1">
+    <img src="./imgs/gallery/all/leanda3.webp" alt="Detail 2">
+  </div>
+
+  <!-- Back link (optional but good) -->
+  <p style="text-align:center; margin-top:20px;">
+    <a href="index.html">Back to portfolio</a>
+  </p>
+
+</body>
+</html>
