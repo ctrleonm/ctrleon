@@ -1,7 +1,19 @@
-.photos-gallery img {
-  transition: transform 0.4s ease;
+.hero {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.photos-gallery img:hover {
-  transform: scale(1.1);
+.thumb-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thumb-row img {
+  width: 100%;
+  display: block;
 }
