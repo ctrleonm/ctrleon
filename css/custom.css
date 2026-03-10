@@ -44,3 +44,12 @@
   height: 100%;
   object-fit: cover;
 }
+.swiper {
+  width: 65%;
+  margin: 60px auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
