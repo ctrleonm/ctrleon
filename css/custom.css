@@ -49,3 +49,8 @@
   max-width: 600px;
   margin: 120px auto;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  transform: scale(0.7);
+}
