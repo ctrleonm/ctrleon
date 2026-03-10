@@ -34,16 +34,7 @@
 .gallery-item img:hover {
   transform: scale(1.02);
 }
-.swiper {
-  width: 100%;
-  height: 80vh;
-}
 
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .swiper {
   width: 65%;
   margin: 60px auto;
