@@ -36,19 +36,26 @@
 }
 
 .swiper {
-  width: 65%;
-  margin: 60px auto;
+  max-width: 700px;
+  margin: 100px auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-slide img {
-  width: 100%;
+  width: auto;
+  max-width: 700px;
   height: auto;
 }
 
-.swiper {
-  max-width: 600px;
-  margin: 120px auto;
-}
 .swiper-button-next,
 .swiper-button-prev {
   color: black;
