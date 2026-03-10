@@ -61,3 +61,6 @@
   color: black;
   transform: scale(0.7);
 }
+.gallery-bg {
+  padding: 160px 0;
+}
