@@ -70,21 +70,24 @@
   width: auto;
 }
 /* Dark faded background behind profile section */
-.hero {
+.home-bg .home.container {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 20px;
-  padding: 60px 20px;
   background: url('../imgs/geral/aboutbackground.webp') center/cover no-repeat;
+  overflow: hidden;
+  padding: 60px 20px;
 }
 
-.hero::before {
+.home-bg .home.container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.5); /* 50% black overlay */
+  background-color: rgba(0,0,0,0.5);
   z-index: 0;
+}
+
+.home-bg .home.container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero > * {
