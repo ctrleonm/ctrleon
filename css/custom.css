@@ -44,3 +44,8 @@
   width: 100%;
   height: auto;
 }
+
+.swiper {
+  max-width: 600px;
+  margin: 120px auto;
+}
