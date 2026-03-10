@@ -74,7 +74,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh; /* makes it fill the entire viewport height */
-  background: url('../imgs/geral/aboutbackground.webp') top center/cover no-repeat;
+  background: url('../imgs/geral/topbg.webp') top center/cover no-repeat;
   overflow: hidden;
   display: flex;
   flex-direction: column;
