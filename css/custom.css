@@ -69,27 +69,26 @@
   max-height: 500px;
   width: auto;
 }
-/* Dark faded background behind profile section */
+/* PROFILE SECTION BACKGROUND IMAGE WITH FADE */
 .home-bg .home.container {
-  position: relative;
+  position: relative; /* keep overlay behind content */
   background: url('../imgs/geral/aboutbackground.webp') center/cover no-repeat;
   overflow: hidden;
-  padding: 60px 20px;
+  padding: 80px 20px; /* add vertical spacing around content */
 }
 
 .home-bg .home.container::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 0;
+  inset: 0; /* cover entire container */
+  background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+  z-index: 0; /* sit behind content */
 }
 
 .home-bg .home.container > * {
-  position: relative;
+  position: relative; /* make text & profile pic above overlay */
   z-index: 1;
 }
-
 .hero > * {
   position: relative; /* bring text and profile pic above overlay */
   z-index: 1;
