@@ -69,3 +69,23 @@
   max-height: 500px;
   width: auto;
 }
+/* Dark faded background behind profile section */
+.home.container {
+  position: relative; /* keep content above background */
+  background: url('./imgs/geral/aboutbackground.jpg') center/cover no-repeat;
+  overflow: hidden; /* ensure the overlay doesn't spill out */
+  padding: 60px 20px; /* optional: adds space around content */
+}
+
+.home.container::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover the entire container */
+  background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+  z-index: 0;
+}
+
+.home.container > * {
+  position: relative; /* make text and profile pic appear above overlay */
+  z-index: 1;
+}
