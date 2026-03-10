@@ -1,94 +1,221 @@
 /* ========================
-   SWIPER ARROWS — FULL CUSTOM
+   HERO / PROFILE SECTION
 ======================== */
+.hero {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto 20px;
+}
 
-/* Base styles for arrows */
+/* Full-width top section background */
+.home-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; /* makes it fill the viewport */
+  background: url('../imgs/geral/topbg.webp') top center/cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faded overlay */
+.home-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* fade */
+  z-index: 0;
+}
+
+/* Content above overlay */
+.home-bg .home.container {
+  position: relative;
+  z-index: 1;
+  padding: 120px 20px 80px; /* top padding pushes content down from logo */
+}
+
+/* Limit profile pic size */
+.home-bg .home.container img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ========================
+   THUMB ROW / COLUMN GALLERY
+======================== */
+.thumb-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thumb-row img {
+  width: 100%;
+  display: block;
+}
+
+.column-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* ========================
+   SWIPER SLIDER
+======================== */
+.swiper {
+  max-width: 700px;
+  margin: 100px auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: auto;
+  max-width: 700px;
+  height: auto;
+}
+
+/* Arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: white;              /* white arrows */
-  opacity: 0.5;              /* semi-transparent */
-  width: 40px;               /* size of the arrow container */
-  height: 40px;
-  background: none;          /* no background */
-  border-radius: 50%;        /* optional: rounded container */
-  top: 50%;                  /* vertically centered */
+  width: 50px;
+  height: 50px;
+  top: 50%;
   transform: translateY(-50%);
-  transition: all 0.3s ease; /* smooth hover effects */
-  z-index: 10;               /* above images */
+  z-index: 10;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Move arrows outside slider */
 .swiper-button-next {
-  right: -50px;              /* outside right */
+  right: -60px;
 }
-
 .swiper-button-prev {
-  left: -50px;               /* outside left */
+  left: -60px;
 }
 
-/* Hover effect for arrows */
-.swiper:hover .swiper-button-next,
-.swiper:hover .swiper-button-prev {
-  opacity: 1;                /* fully visible */
-  transform: translateY(-50%) scale(1.2); /* scale up slightly */
-}
-
-/* Optional: increase arrow icon size */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 24px;           /* arrow size */
+  color: white !important;
+  font-size: 30px;
   font-weight: bold;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Optional: hide arrows on small screens */
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
   }
 }
+
+/* Gallery padding */
+.gallery-bg {
+  padding: 80px 0;
+}
+
 /* ========================
-   SWIPER ARROWS OVERRIDE
+   ABOUT SECTION
 ======================== */
-
-/* Position arrows outside slider */
-.swiper-button-next,
-.swiper-button-prev {
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10; /* make sure they're above images */
-    background: none; /* no background */
+.about.new-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  flex-wrap: wrap;
 }
 
-/* Move outside */
-.swiper-button-next {
-    right: -60px; /* adjust as needed */
-}
-.swiper-button-prev {
-    left: -60px; /* adjust as needed */
-}
-
-/* Change arrow color to white */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    color: white !important; /* force white */
-    font-size: 30px; /* adjust arrow size */
-    font-weight: bold;
+.about .photo {
+  flex-shrink: 0;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Hover effect: fade + scale */
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
-    transform: scale(1.2);
-    opacity: 1;
+.about .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 500px; /* crop top/bottom slightly */
 }
 
-/* Hide arrows on small screens */
-@media (max-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none;
-    }
+.about .content {
+  flex: 1;
+  min-width: 250px;
 }
+
+/* Responsive: stack image above text on small screens */
+@media (max-width: 900px) {
+  .about.new-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about .content {
+    min-width: auto;
+  }
+}
+
+/* ========================
+   FULL-SECTION BACKGROUND IMAGE (optional)
+======================== */
+/* You can reuse this for other sections if needed */
+.section-bg {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ========================
+   MISC
+======================== */
+/* Limit max width for general images */
+.hero img,
+.thumb-row img,
+.column-gallery img,
+.about .photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons, hover effects, etc. can go here */
