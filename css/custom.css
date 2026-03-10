@@ -69,27 +69,37 @@
   max-height: 500px;
   width: auto;
 }
-/* PROFILE SECTION BACKGROUND IMAGE WITH FADE */
-.home-bg .home.container {
-  position: relative; /* keep overlay behind content */
-  background: url('../imgs/geral/aboutbackground.webp') center/cover no-repeat;
+/* FULL-WIDTH TOP SECTION BACKGROUND */
+.home-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; /* makes it fill the entire viewport height */
+  background: url('../imgs/geral/aboutbackground.webp') top center/cover no-repeat;
   overflow: hidden;
-  padding: 80px 20px; /* add vertical spacing around content */
+  display: flex;
+  flex-direction: column;
 }
 
-.home-bg .home.container::before {
+/* Faded overlay */
+.home-bg::before {
   content: "";
   position: absolute;
-  inset: 0; /* cover entire container */
-  background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
-  z-index: 0; /* sit behind content */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* fade */
+  z-index: 0;
 }
 
-.home-bg .home.container > * {
-  position: relative; /* make text & profile pic above overlay */
+/* Make all content appear above overlay */
+.home-bg .home.container {
+  position: relative;
   z-index: 1;
+  padding: 120px 20px 80px; /* top padding pushes content down from logo */
 }
-.hero > * {
-  position: relative; /* bring text and profile pic above overlay */
-  z-index: 1;
+
+/* Limit profile pic size so it doesn’t get huge */
+.home-bg .home.container img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
 }
