@@ -47,3 +47,48 @@
     display: none;
   }
 }
+/* ========================
+   SWIPER ARROWS OVERRIDE
+======================== */
+
+/* Position arrows outside slider */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* make sure they're above images */
+    background: none; /* no background */
+}
+
+/* Move outside */
+.swiper-button-next {
+    right: -60px; /* adjust as needed */
+}
+.swiper-button-prev {
+    left: -60px; /* adjust as needed */
+}
+
+/* Change arrow color to white */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: white !important; /* force white */
+    font-size: 30px; /* adjust arrow size */
+    font-weight: bold;
+}
+
+/* Hover effect: fade + scale */
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Hide arrows on small screens */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
