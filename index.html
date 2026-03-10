@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,18 +76,32 @@
       </ul>
     </nav>
 
- <div class="photos-gallery column-gallery" data-gallery>
-  <a href="project-leanda.html" class="gallery-item">
-    <img src="./imgs/gallery/all/leanda1.webp" alt="Leanda project">
-  </a>
+<div class="swiper">
+  <div class="swiper-wrapper">
 
-  <a href="project-malachi.html" class="gallery-item">
-    <img src="./imgs/gallery/all/malachi.webp" alt="Malachi project">
-  </a>
+    <div class="swiper-slide">
+      <a href="project-leanda.html">
+        <img src="./imgs/gallery/all/leanda1.webp" alt="Leanda project">
+      </a>
+    </div>
 
-  <a href="project-misc.html" class="gallery-item">
-    <img src="./imgs/gallery/all/malachithree.webp" alt="Misc project">
-  </a>
+    <div class="swiper-slide">
+      <a href="project-malachi.html">
+        <img src="./imgs/gallery/all/malachi.webp" alt="Malachi project">
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="project-misc.html">
+        <img src="./imgs/gallery/all/malachithree.webp" alt="Misc project">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
 </div>
   </div>
 </article>
@@ -157,5 +172,16 @@
 
     <script src="./js/plugin/simple-anime.js"></script>
     <script type="module" src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
 </body>
 </html>
