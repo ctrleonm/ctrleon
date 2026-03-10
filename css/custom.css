@@ -257,3 +257,37 @@
   transform: scale(1.2);
   opacity: 1;
 }
+/* CONTACT SECTION: card-style container */
+.contact.container {
+  background-color: rgba(0, 0, 0, 0.6); /* dark semi-transparent box */
+  padding: 60px 40px; /* space inside the box */
+  border-radius: 12px; /* optional: rounded corners */
+  max-width: 800px; /* limits width */
+  margin: 60px auto; /* centers the box and adds space above/below */
+}
+
+.contact.container h2,
+.contact.container h3 {
+  margin: 0 0 20px 0;
+}
+
+.contact-bg {
+  /* make sure background image still shows behind the box */
+  background: url('../imgs/geral/contactbg.webp') center/cover no-repeat;
+  padding: 100px 20px; /* keeps image visible above and below box */
+  position: relative;
+}
+
+.contact-bg::before {
+  /* optional: keep slight fade overlay */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3); /* lighter overlay so box stands out */
+  z-index: 0;
+}
+
+.contact.container > * {
+  position: relative; /* ensures content sits above overlay */
+  z-index: 1;
+}
