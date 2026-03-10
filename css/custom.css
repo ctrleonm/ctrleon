@@ -219,3 +219,41 @@
 }
 
 /* Buttons, hover effects, etc. can go here */
+
+/* ======================
+   SWIPER ARROWS FIX
+====================== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; /* override default blue */
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+}
+
+.swiper-button-next {
+  right: -60px; /* outside the image */
+}
+
+.swiper-button-prev {
+  left: -60px; /* outside the image */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+  color: white !important; /* make sure it's white */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  transform: scale(1.2);
+  opacity: 1;
+}
