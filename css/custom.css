@@ -64,3 +64,8 @@
 .gallery-bg {
   padding: 80px 0;
 }
+/* ABOUT SECTION IMAGE */
+.about .photo img {
+  max-height: 500px;
+  width: auto;
+}
