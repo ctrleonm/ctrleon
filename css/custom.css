@@ -297,3 +297,10 @@
   object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
   object-position: center; /* Keeps the image centered */
 }
+.swiper-slide img {
+  width: 100%; /* Ensure image fills container width */
+  height: 100%; /* Ensure image fills container height */
+  object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
+  object-position: center; /* Keeps the image centered */
+  transform: scale(0.7); /* Make the image 30% smaller */
+}
