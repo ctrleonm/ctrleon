@@ -32,7 +32,7 @@
 .home-bg .home.container {
   position: relative;
   z-index: 1;
-  padding: 100px 20px 80px; /* top padding pushes content down from logo */
+  padding: 60px 20px 40px; /* Adjusted padding to 20px top and 40px bottom */
 }
 
 /* Limit profile pic size */
@@ -82,7 +82,7 @@
 ======================== */
 .swiper {
   max-width: 700px;
-  margin: 100px auto;
+  margin: 60px auto;
 }
 
 .swiper-wrapper {
@@ -145,7 +145,7 @@
 
 /* Gallery padding */
 .gallery-bg {
-  padding: 40px 0;
+  padding: 20px 0; /* Reduced padding */
 }
 
 /* ========================
@@ -157,7 +157,7 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px; /* Adjusted padding */
   flex-wrap: wrap;
 }
 
@@ -257,10 +257,11 @@
   transform: scale(1.2);
   opacity: 1;
 }
+
 /* CONTACT SECTION: card-style container */
 .contact.container {
   background-color: rgba(0, 0, 0, 0.6); /* dark semi-transparent box */
-  padding: 60px 40px; /* space inside the box */
+  padding: 40px 40px; /* Adjusted padding */
   border-radius: 12px; /* optional: rounded corners */
   max-width: 800px; /* limits width */
   margin: 60px auto; /* centers the box and adds space above/below */
@@ -274,7 +275,7 @@
 .contact-bg {
   /* make sure background image still shows behind the box */
   background: url('../imgs/geral/contactbg.webp') center/cover no-repeat;
-  padding: 100px 20px; /* keeps image visible above and below box */
+  padding: 80px 20px; /* keeps image visible above and below box */
   position: relative;
 }
 
@@ -291,12 +292,7 @@
   position: relative; /* ensures content sits above overlay */
   z-index: 1;
 }
-.swiper-slide img {
-  width: 100%; /* Ensure image fills container width */
-  height: 100%; /* Ensure image fills container height */
-  object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
-  object-position: center; /* Keeps the image centered */
-}
+
 .swiper-slide img {
   width: 100%; /* Ensure image fills container width */
   height: 100%; /* Ensure image fills container height */
