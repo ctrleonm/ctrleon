@@ -1,4 +1,142 @@
 /* ========================
+   GALLERY SECTION
+======================== */
+.gallery-bg {
+  padding: 40px 0; /* Increased space above 'Selected Works' */
+  background-color: #111; /* Off-black background */
+  color: white; /* White text */
+}
+
+.gallery.container {
+  margin-bottom: 30px; /* Reduced space under the gallery menu and before the images */
+}
+
+/* ========================
+   GALLERY MENU
+======================== */
+.gallery-menu {
+  margin-bottom: 15px; /* Reduced bottom margin to bring gallery menu closer to images */
+}
+
+/* ========================
+   SWIPER SLIDER
+======================== */
+.swiper {
+  max-width: 700px;
+  margin: 100px auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: auto;
+  max-width: 700px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.02);
+}
+
+/* Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+.swiper-button-prev {
+  left: -60px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white !important;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* ========================
+   ABOUT SECTION
+======================== */
+.about.new-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.about .photo {
+  flex-shrink: 0;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 500px; /* crop top/bottom slightly */
+}
+
+.about .content {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Responsive: stack image above text on small screens */
+@media (max-width: 900px) {
+  .about.new-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about .content {
+    min-width: auto;
+  }
+}
+
+/* ========================
    HERO / PROFILE SECTION
 ======================== */
 .hero {
@@ -32,7 +170,7 @@
 .home-bg .home.container {
   position: relative;
   z-index: 1;
-  padding: 60px 20px 40px; /* Adjusted padding to 20px top and 40px bottom */
+  padding: 100px 20px 80px; /* top padding pushes content down from logo */
 }
 
 /* Limit profile pic size */
@@ -78,136 +216,6 @@
 }
 
 /* ========================
-   SWIPER SLIDER
-======================== */
-.swiper {
-  max-width: 700px;
-  margin: 60px auto;
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.swiper-slide img {
-  width: auto;
-  max-width: 700px;
-  height: auto;
-}
-
-/* Arrows */
-.swiper-button-next,
-.swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.swiper-button-next {
-  right: -60px;
-}
-.swiper-button-prev {
-  left: -60px;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: white !important;
-  font-size: 30px;
-  font-weight: bold;
-  opacity: 0.8;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-}
-
-/* Gallery padding */
-.gallery-bg {
-  padding: 20px 0; /* Reduced padding to make images closer to 'Stills Video 3D' */
-  background-color: #111; /* Set the background to an off-black color */
-}
-
-/* ========================
-   ABOUT SECTION
-======================== */
-.about.new-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px; /* Adjusted padding */
-  flex-wrap: wrap;
-}
-
-.about .photo {
-  flex-shrink: 0;
-  max-width: 500px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.about .photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  max-height: 500px; /* crop top/bottom slightly */
-}
-
-.about .content {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* Responsive: stack image above text on small screens */
-@media (max-width: 900px) {
-  .about.new-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .about .content {
-    min-width: auto;
-  }
-}
-
-/* ========================
-   FULL-SECTION BACKGROUND IMAGE (optional)
-======================== */
-/* You can reuse this for other sections if needed */
-.section-bg {
-  position: relative;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-/* ========================
    MISC
 ======================== */
 /* Limit max width for general images */
@@ -219,50 +227,12 @@
   height: auto;
 }
 
-/* Buttons, hover effects, etc. can go here */
-
-/* ======================
-   SWIPER ARROWS FIX
-====================== */
-.swiper-button-next,
-.swiper-button-prev {
-  color: white !important; /* override default blue */
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: none;
-}
-
-.swiper-button-next {
-  right: -60px; /* outside the image */
-}
-
-.swiper-button-prev {
-  left: -60px; /* outside the image */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 30px;
-  font-weight: bold;
-  opacity: 0.8;
-  color: white !important; /* make sure it's white */
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-/* CONTACT SECTION: card-style container */
+/* ========================
+   CONTACT SECTION: card-style container
+======================== */
 .contact.container {
   background-color: rgba(0, 0, 0, 0.6); /* dark semi-transparent box */
-  padding: 40px 40px; /* Adjusted padding */
+  padding: 60px 40px; /* space inside the box */
   border-radius: 12px; /* optional: rounded corners */
   max-width: 800px; /* limits width */
   margin: 60px auto; /* centers the box and adds space above/below */
@@ -276,7 +246,7 @@
 .contact-bg {
   /* make sure background image still shows behind the box */
   background: url('../imgs/geral/contactbg.webp') center/cover no-repeat;
-  padding: 80px 20px; /* keeps image visible above and below box */
+  padding: 100px 20px; /* keeps image visible above and below box */
   position: relative;
 }
 
@@ -292,12 +262,4 @@
 .contact.container > * {
   position: relative; /* ensures content sits above overlay */
   z-index: 1;
-}
-
-.swiper-slide img {
-  width: 100%; /* Ensure image fills container width */
-  height: 100%; /* Ensure image fills container height */
-  object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
-  object-position: center; /* Keeps the image centered */
-  transform: scale(0.7); /* Make the image 30% smaller */
 }
