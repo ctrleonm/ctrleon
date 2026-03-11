@@ -32,7 +32,7 @@
 .home-bg .home.container {
   position: relative;
   z-index: 1;
-  padding: 120px 20px 80px; /* top padding pushes content down from logo */
+  padding: 100px 20px 80px; /* top padding pushes content down from logo */
 }
 
 /* Limit profile pic size */
@@ -145,7 +145,7 @@
 
 /* Gallery padding */
 .gallery-bg {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 /* ========================
