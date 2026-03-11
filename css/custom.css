@@ -145,7 +145,8 @@
 
 /* Gallery padding */
 .gallery-bg {
-  padding: 20px 0; /* Reduced padding */
+  padding: 20px 0; /* Reduced padding to make images closer to 'Stills Video 3D' */
+  background-color: #111; /* Set the background to an off-black color */
 }
 
 /* ========================
