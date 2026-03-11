@@ -291,3 +291,9 @@
   position: relative; /* ensures content sits above overlay */
   z-index: 1;
 }
+.swiper-slide img {
+  width: 100%; /* Ensure image fills container width */
+  height: 100%; /* Ensure image fills container height */
+  object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
+  object-position: center; /* Keeps the image centered */
+}
