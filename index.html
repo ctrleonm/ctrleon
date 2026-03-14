@@ -46,11 +46,14 @@
         </div>
     </main>
 
-   <article class="gallery-bg" id="gallery">
+  <article class="gallery-bg" id="gallery">
   <div class="gallery container">
-    <h1 class="font-1-xxl cor-c15">Selected works<span class="cor-c9">.</span></h1>
-    <nav aria-label="secundaria">
-      <ul class="gallery-menu font-2-l cor-10" data-galleryNav>
+    <!-- Heading -->
+    <h1 class="gallery-title">Selected works<span class="highlight">.</span></h1>
+
+    <!-- Gallery Menu -->
+    <nav aria-label="Gallery Navigation">
+      <ul class="gallery-menu">
         <li class="active">All</li>
         <li>Stills</li>
         <li>Video</li>
@@ -142,6 +145,25 @@
     </div>
   </div>
 </article>
+
+<!-- Swiper JS initialization -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.gallery-swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 30,
+    slidesPerView: 1,
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+    
  <section class="about-bg" id="about" aria-label="About Me">
         <div class="about new-container">
             <div class="photo">
